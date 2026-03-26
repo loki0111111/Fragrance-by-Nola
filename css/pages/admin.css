@@ -1,0 +1,461 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ---- Login ---- */
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #0f0f0f;
+}
+
+.login-box {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-box h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.login-box h1 span {
+  color: #F5CC77;
+}
+
+.login-box h3 {
+  color: #aaa;
+  font-weight: 400;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-form input {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.login-form input:focus {
+  border-color: #F5CC77;
+}
+
+.login-form button {
+  background: #F5CC77;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.login-form button:hover {
+  opacity: 0.85;
+}
+
+.login-error {
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  display: none;
+}
+
+/* ---- Dashboard ---- */
+.dashboard {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ---- Sidebar ---- */
+.sidebar {
+  width: 240px;
+  background: #1a1a1a;
+  border-right: 1px solid #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+  gap: 2rem;
+  flex-shrink: 0;
+}
+
+.sidebar h2 {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.sidebar h2 span {
+  color: #F5CC77;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: transparent;
+  border: none;
+  color: #aaa;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.nav-btn:hover {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.nav-btn.active {
+  background: #F5CC77;
+  color: #000;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: transparent;
+  border: 1px solid #444;
+  color: #aaa;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: auto;
+  transition: all 0.2s;
+}
+
+.logout-btn:hover {
+  border-color: #ff4d4d;
+  color: #ff4d4d;
+}
+
+/* ---- Main Content ---- */
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+.tab-header {
+  margin-bottom: 1.5rem;
+}
+
+.tab-header h2 {
+  font-size: 1.4rem;
+}
+
+/* ---- Product Grid ---- */
+.admin-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.admin-product-card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: border 0.2s;
+}
+
+.admin-product-card:hover {
+  border-color: #F5CC77;
+}
+
+.admin-product-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.admin-product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-product-info {
+  flex: 1;
+}
+
+.admin-product-info h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.admin-product-info p {
+  color: #F5CC77;
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+}
+
+.category-tag {
+  background: #2a2a2a;
+  color: #aaa;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+}
+
+.admin-product-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.edit-btn, .delete-btn {
+  background: transparent;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #aaa;
+  cursor: pointer;
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.edit-btn:hover {
+  border-color: #F5CC77;
+  color: #F5CC77;
+}
+
+.delete-btn:hover {
+  border-color: #ff4d4d;
+  color: #ff4d4d;
+}
+
+/* ---- Product Form ---- */
+.product-form {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.form-group input,
+.form-group select {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #F5CC77;
+}
+
+.form-group select option {
+  background: #2a2a2a;
+}
+
+.image-preview {
+  margin-top: 0.8rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #444;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.form-btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.save-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #F5CC77;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.save-btn:hover {
+  opacity: 0.85;
+}
+
+.cancel-btn {
+  background: transparent;
+  border: 1px solid #444;
+  color: #aaa;
+  border-radius: 8px;
+  padding: 0.9rem 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancel-btn:hover {
+  border-color: #ff4d4d;
+  color: #ff4d4d;
+}
+
+.form-status {
+  font-size: 0.9rem;
+  min-height: 1.2rem;
+}
+
+.loading {
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+/* ---- Responsive ---- */
+/* ---- Sidebar Toggle Button ---- */
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 999;
+  background: #F5CC77;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 997;
+}
+
+.sidebar-overlay.active {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dashboard {
+    position: relative;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    height: 100vh;
+    z-index: 998;
+    transition: left 0.3s ease;
+    width: 240px;
+    padding: 1.5rem 1rem;
+    overflow-y: auto;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .sidebar h2 {
+    padding-left: 2.5rem;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 1rem;
+    padding-top: 4rem;
+    overflow-y: auto;
+  }
+}
+

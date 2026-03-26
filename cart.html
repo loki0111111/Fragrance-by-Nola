@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="shortcut icon" href="assets/css/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/pages/shop.css">
+    <link rel="stylesheet" href="css/pages/cart.css">
+    <link rel="stylesheet" href="assets/fonts/font1/stylesheet.css">
+    <link rel="stylesheet" href="assets/fonts/font2/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<!-- mobile nav -->
+<section id="mobile-nav" class="mobile-nav">
+    <div class="mobile-nav-content">
+        <div id="close-hamburger" class="close-hamburger">
+            <span class="material-symbols-outlined">close</span>
+        </div>
+        <div class="mobile-nav-logo">
+            <h2>Fragrance by <span>Nola</span></h2>
+        </div>
+        <div class="mobile-nav-links">
+            <ul>
+                <li><a onclick="closeNavBar()" href="index.html">home</a></li>
+                <li><a onclick="closeNavBar()" href="shop.html">shop</a></li>
+                <li><a onclick="closeNavBar()" href="about.html">about</a></li>
+                <li><a onclick="closeNavBar()" href="cart.html">cart</a></li>
+            </ul>
+        </div>
+        <div class="mobile-shop-now">
+            <a onclick="closeNavBar()" href="shop.html">shop now</a>
+        </div>
+    </div>
+</section>
+
+<header>
+    <nav>
+        <div class="nav-brand-name">
+            <h1>Fragrance by <span>Nola</span></h1>
+        </div>
+        <div class="nav-middle-link">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="shop.html">shop</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="cart.html">cart</a></li>
+            </ul>
+        </div>
+        <div class="nav-shop">
+            <div class="shop-icon">
+                <a href="cart.html"><span class="material-symbols-outlined">shopping_cart</span></a>
+                <p class="cart-id"></p>
+            </div>
+            <div class="shop-btn">
+                <a href="shop.html">shop now</a>
+            </div>
+            <div id="open-hamburger" class="open-hamburger">
+                <span class="material-symbols-outlined">dehaze</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="header-blur">
+        <div class="hero-content">
+            <h1>your <span style="color: #F5CC77;">cart</span></h1>
+        </div>
+    </div>
+</header>
+
+<!-- cart section -->
+<div class="cart-section">
+    <div class="cart-items" id="cart-items">
+        <!-- items will be rendered here -->
+    </div>
+
+    <div class="cart-summary" id="cart-summary">
+        <h3>Order Summary</h3>
+        <p>Total: <span id="cart-total">₦0</span></p>
+        <button id="checkout-btn">
+            <i class="fa-brands fa-whatsapp"></i> Checkout via WhatsApp
+        </button>
+        <a href="shop.html" class="continue-shopping">← Continue Shopping</a>
+    </div>
+</div>
+
+<div class="empty-cart" id="empty-cart" style="display:none;">
+    <span class="material-symbols-outlined">shopping_cart</span>
+    <h3>Your cart is empty</h3>
+    <a href="shop.html">Start Shopping</a>
+</div>
+
+<!-- footer -->
+<footer>
+    <div class="footer-contents">
+        <div class="footer-brand">
+            <div class="drop"><i class="fa-solid fa-droplet"></i></div>
+            <h1>Fragrance by <span style="color: #F5CC77;">Nola</span></h1>
+            <p>Discover luxurious perfumes crafted for elegance and confidence.</p>
+        </div>
+        <div class="footer-cont">
+            <h3>quick links</h3>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="shop.html">shop</a></li>
+                <li><a href="about.html">about us</a></li>
+                <li><a href="cart.html">cart</a></li>
+            </ul>
+        </div>
+        <div class="footer-cont">
+            <h3>customer care</h3>
+            <ul>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="shi&ret.html">shipping & returns</a></li>
+                <li><a href="privacyPolicy.html">privacy policy</a></li>
+                <li><a href="term&cond.html">terms & conditions</a></li>
+            </ul>
+        </div>
+        <div class="footer-cont">
+            <h3>contact us</h3>
+            <ul>
+                <li><a style="text-transform: none;" href="mailto:adepejujoda2@gmail.com">adepejujoda2@gmail.com</a></li>
+                <li><a href="tel:2348111116668">+234 811 111 6668</a></li>
+            </ul>
+            <div class="socials">
+                <a href="https://www.snapchat.com/add/teniolaadepeju" target="_blank"><i class="fa-brands fa-snapchat"></i></a>
+                <a href="https://wa.me/2348111116668" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/nola_.love2" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@teni_love2" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="footer-end">
+    <p>&copy <span id="year"></span> Fragrance by <span style="color: #F5CC77;">Nola</span>. All rights reserved.</p>
+</div>
+
+<script type="module" src="js/pages/cart.js"></script>
+<script type="module" src="js/pages/shop.js"></script>
+</body>
+</html>
