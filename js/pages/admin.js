@@ -204,7 +204,6 @@ function cancelEdit() {
 }
 window.cancelEdit = cancelEdit;
 
-// ---- Helper ----
 function showTabByName(tab) {
   document.querySelectorAll('.tab').forEach(t => t.style.display = 'none');
   document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
@@ -214,13 +213,11 @@ function showTabByName(tab) {
   });
 }
 
-// ---- Allow login on Enter key ----
 document.getElementById('password-input').addEventListener('keydown', e => {
   if (e.key === 'Enter') login();
 });
 document.getElementById('login-btn').addEventListener('click', login);
 
-// ---- Sidebar Toggle ----
 const sidebarToggle = document.getElementById('sidebar-toggle');
 const sidebarOverlay = document.getElementById('sidebar-overlay');
 
